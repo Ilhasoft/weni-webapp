@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/home.vue';
 import Account from './views/account.vue';
+import Billing from './views/billing/billing.vue';
 import Orgs from './views/org/orgs.vue';
 import CreateOrg from './views/org/createOrg.vue';
 import Redirecting from './views/redirecting.vue';
@@ -23,6 +24,11 @@ const router = new Router({
       path: '/account',
       name: 'account',
       component: Account,
+    },
+    {
+      path: '/billing',
+      name: 'billing',
+      component: Billing,
     },
     {
       path: '/orgs',
@@ -77,6 +83,7 @@ const router = new Router({
 const themes = {
   'create_org': () => 'secondary',
   orgs: () => 'secondary',
+  billing: () => 'secondary',
   projects: () => 'secondary',
   'project_create': () => 'secondary',
   'account': (org) => { 
