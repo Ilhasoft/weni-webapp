@@ -151,7 +151,6 @@ export default {
   beforeMount() {
     this.verifyMozilla =
       window.navigator.appCodeName === 'Mozilla' ? '15px' : '';
-    console.log(this.verifyMozilla);
   },
 
   created() {
